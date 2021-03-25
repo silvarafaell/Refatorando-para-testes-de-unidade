@@ -8,8 +8,8 @@ namespace Store.Tests.Domain
     [TestClass]
     public class OrderTests
     {
-        private readonly Customer _customer = new Customer("André Baltieri", "andre@balta.io");
-        private readonly Product _product = new Product("Produto 1", 10, true);
+        private readonly Customer _customer = new Customer("Francisco Rafael", "francisco_rafael@hotmail.com.br");
+        private readonly Product _product = new Product("Produto 1", 5, true);
         private readonly Discount _discount = new Discount(10, DateTime.Now.AddDays(5));
 
 
