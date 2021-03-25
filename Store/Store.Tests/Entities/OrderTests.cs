@@ -9,7 +9,7 @@ namespace Store.Tests.Domain
     public class OrderTests
     {
         private readonly Customer _customer = new Customer("Francisco Rafael", "francisco_rafael@hotmail.com.br");
-        private readonly Product _product = new Product("Produto 1", 5, true);
+        private readonly Product _product = new Product("Produto 1", 10, true);
         private readonly Discount _discount = new Discount(10, DateTime.Now.AddDays(5));
 
 
@@ -25,6 +25,7 @@ namespace Store.Tests.Domain
         [TestCategory("Domain")]
         public void Dado_um_novo_pedido_seu_status_deve_ser_aguardando_pagamento()
         {
+            //status do pedido 
             var order = new Order(_customer, 0, null);
             Assert.AreEqual(order.Status, EOrderStatus.WaitingPayment);
         }
